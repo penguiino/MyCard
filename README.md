@@ -1,16 +1,9 @@
-# untitled
+# MyCard
 
-A new Flutter project.
+A practice Flutter project.
 
-## Getting Started
+## About the project
 
-This project is a starting point for a Flutter application.
+share your business card via email, social channels, or have people tap your card on the app via QR code to exchange all information. Within seconds, new contacts have access to everything you wanted to share.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
