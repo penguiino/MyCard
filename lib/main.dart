@@ -28,7 +28,7 @@ class LoginDemo extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(top: 60.0),
+              padding: const EdgeInsets.only(top: 50.0),
               child: Center(
                 child: Container(
                     width: 200,
@@ -40,8 +40,8 @@ class LoginDemo extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 300.0, right: 300.0, top: 15, bottom: 0),
-              //padding: EdgeInsets.symmetric(horizontal: 15),
+              //padding: const EdgeInsets.only(left: 300.0, right: 300.0, top: 15, bottom: 10),
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
               child: TextField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
@@ -50,9 +50,9 @@ class LoginDemo extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(
-                  left: 300.0, right: 300.0, top: 15, bottom: 15),
-              //padding: EdgeInsets.symmetric(horizontal: 15),
+              /*padding: const EdgeInsets.only(
+                  left: 300.0, right: 300.0, top: 15, bottom: 15),*/
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
               child: TextField(
 
                 obscureText: true,
@@ -76,18 +76,12 @@ class LoginDemo extends StatelessWidget {
               width: 250,
               decoration: BoxDecoration(
                   color: Colors.blue, borderRadius: BorderRadius.circular(20)),
-              /*child: FlatButton(
-                onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (_) => HomePage()));
-                },*/
               child: ElevatedButton(
                 child: Text('Login'),
                   onPressed: () {
                     Navigator.push(
                         context, MaterialPageRoute(builder: (_) => HomeDemo()));
                   }
-
               ),
             ),
             //),
@@ -113,7 +107,64 @@ class HomeDemo extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Home Page"),
+        title: Text("Home"),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              child: Center(
+                child: Container(
+                    width: 380,
+                    height: 200,
+                    decoration: BoxDecoration(
+                        color: Colors.grey[300],
+                      borderRadius: BorderRadius.circular(50.0),
+                      border: Border.all(
+                      color: Colors.black,
+                ),
+                      image: DecorationImage(
+                        image: AssetImage(
+                            'assets/selena.jpeg'),
+                        fit: BoxFit.fill,
+                      ),
+                      //shape: BoxShape.circle, // circle shape image
+                ),
+              ),
+            ),
+            ),
+
+            Container(
+              height: 80,
+              width: 250,
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              child: ElevatedButton(
+                  child: Text('Contacts'),
+                  onPressed: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (_) => contactDemo()));
+                  }
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// contact page--------------------------------------------------------------
+
+class contactDemo extends StatelessWidget {
+  const contactDemo({ Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text("Contacts"),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -122,36 +173,24 @@ class HomeDemo extends StatelessWidget {
               padding: const EdgeInsets.only(top: 60.0),
               child: Center(
                 child: Container(
-                    width: 400,
-                    height: 250,
-                    decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                      borderRadius: BorderRadius.circular(50.0),
-                      border: Border.all(
-                      color: Colors.black,
-                ),
-                ),
-              ),
-            ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 60.0),
-              child: Center(
-                child: Container(
-                  width: 400,
-                  height: 250,
+                  width: 390,
+                  height: 500,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(50.0),
                     border: Border.all(
                       color: Colors.black,
                     ),
+                    image: DecorationImage(
+                      image: AssetImage(
+                          'assets/selena.jpg'),
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
               ),
             ),
           ],
-
         ),
       ),
     );
