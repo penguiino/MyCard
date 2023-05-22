@@ -1,15 +1,3 @@
-import Cocoa
-import FlutterMacOS
-
-class MainFlutterWindow: NSWindow {
-  override func awakeFromNib() {
-    let flutterViewController = FlutterViewController.init()
-    let windowFrame = self.frame
-    self.contentViewController = flutterViewController
-    self.setFrame(windowFrame, display: true)
-
-    RegisterGeneratedPlugins(registry: flutterViewController)
-
-    super.awakeFromNib()
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:539813d1b268f5f3fcb53bf9e2858851558a43269732f049f46773a0c6771b0e
+size 393
