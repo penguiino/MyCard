@@ -398,6 +398,8 @@ class _CardPageState extends State<CardPage> {
   }
 }
 
+
+
 class QRScanPage extends StatefulWidget {
   const QRScanPage({Key? key}) : super(key: key);
 
@@ -479,3 +481,5 @@ class _QRScanPageState extends State<QRScanPage> {
     super.dispose();
   }
 }
+
+
